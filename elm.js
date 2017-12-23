@@ -8270,14 +8270,25 @@ var _user$project$Main$view = A2(
 	{
 		ctor: '::',
 		_0: A2(
-			_elm_lang$html$Html$h1,
-			{ctor: '[]'},
+			_elm_lang$html$Html$nav,
 			{
 				ctor: '::',
-				_0: _elm_lang$html$Html$text('lumo'),
+				_0: _elm_lang$html$Html_Attributes$class('navbar navbar-inverse'),
 				_1: {ctor: '[]'}
-			}),
-		_1: {ctor: '[]'}
+			},
+			{ctor: '[]'}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$img,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$src('logo_splash_A_02.png'),
+					_1: {ctor: '[]'}
+				},
+				{ctor: '[]'}),
+			_1: {ctor: '[]'}
+		}
 	});
 var _user$project$Main$main = _elm_lang$virtual_dom$Native_VirtualDom.staticProgram(_user$project$Main$view);
 

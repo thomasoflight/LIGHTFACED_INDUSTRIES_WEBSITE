@@ -7,12 +7,9 @@ import Html.Events exposing (onClick)
 
 view =
     div [ class "container" ]
-        [ h1 [] [ text "lumo" ]
+        [ nav [ class "navbar navbar-inverse" ] []
+        , img [ src ("logo_splash_A_02.png") ] []
         ]
-
-
-
--- update : Msg -> Model
 
 
 main =
