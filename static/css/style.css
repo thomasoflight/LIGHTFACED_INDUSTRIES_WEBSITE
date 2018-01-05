@@ -1,13 +1,62 @@
-body {
-    background-color: grey;
-    padding-top: 75px;
+body, html {
     padding-bottom: 25px;
+    height: 100%;
+    font-family: 'Josefin Sans', 'Questrial', 'Raleway', sans-serif;
+}
+
+.bg {
+    /* background-image: url("background_pattern.jpg"); */
+    background-image: url("../../background_pattern.jpg");
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
     background-color: white;
-    min-width: 550px;
-    max-width: 700px;
-    min-height: 700px;
-    max-height: 1000px;
+    min-width: 450px;
+    max-width: 60%;
+    min-height: 1000px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.nav-item {
+    height: 81px;
+    color: #fff;
+    font-family: Questrial;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: .5em;
+}
+
+.project-links {
+    max-width: 87%;
+}
+
+.project-links-spacing {
+    padding-bottom: 15%;
+}
+
+.project-img-links {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 11px solid #000;
+}
+
+.project-img-links:hover {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 11px solid #ec407a;
+}
+
+.project-info-title {
+    font-size: 2em;
+    font-weight: 600;
 }
