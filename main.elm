@@ -8,7 +8,8 @@ import List
 
 view =
     div [ class "container" ]
-        [ nav [ class "navbar navbar-expand-md navbar-dark bg-dark navbar-height" ]
+        [ img [ src ("header_colored_letters.svg") ] []
+        , nav [ class "navbar navbar-expand-md navbar-dark bg-dark navbar-height" ]
             [ ul [ class "navbar-nav mx-auto text-center" ]
                 [ li [ class "nav-item mx-auto" ] [ text "about" ]
                 , li [ class "nav-item mx-auto" ] [ text "portfolio" ]
@@ -36,9 +37,9 @@ type alias Project =
 
 selectedProjects : List Project
 selectedProjects =
-    [ { projectTitle = "Illustration", projectImg = "1.png", projectLink = "http://www.google.com" }
-    , { projectTitle = "UX / UI / Design", projectImg = "2.png", projectLink = "http://www.google.com" }
-    , { projectTitle = "Code", projectImg = "3.png", projectLink = "http://www.google.com" }
+    [ { projectTitle = "Illustration", projectImg = "1.png", projectLink = "https://www.instagram.com/dicharliedesigns" }
+    , { projectTitle = "UX / UI / Design", projectImg = "2.png", projectLink = "https://www.instagram.com/lightfaced.industries/" }
+    , { projectTitle = "Code", projectImg = "3.png", projectLink = "https://github.com/thomasoflight" }
     ]
 
 
@@ -50,7 +51,7 @@ viewImgProjectlink record =
     in
         div
             [ class "project-links-spacing" ]
-            [ viewProjectInfo projectTitle projectLink
+            [ viewProjectInfo ( projectTitle, projectLink )
             , img
                 [ src (projectImg)
                 , class "img-fluid project-img-links"
@@ -63,7 +64,7 @@ viewImgProjectlink record =
 --[ a [ href "#", onClick (SwitchPage Schedule) ] [ text "Schedule" ]
 
 
-viewProjectInfo projectTitle projectLink =
+viewProjectInfo ( projectTitle, projectLink ) =
     p [ class "project-info-title" ] [ a [ href (projectLink) ] [ text (projectTitle) ] ]
 
 

@@ -8260,37 +8260,37 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
-var _user$project$Main$viewProjectInfo = F2(
-	function (projectTitle, projectLink) {
-		return A2(
-			_elm_lang$html$Html$p,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('project-info-title'),
-				_1: {ctor: '[]'}
-			},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$a,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$href(projectLink),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text(projectTitle),
-						_1: {ctor: '[]'}
-					}),
-				_1: {ctor: '[]'}
-			});
-	});
+var _user$project$Main$viewProjectInfo = function (_p0) {
+	var _p1 = _p0;
+	return A2(
+		_elm_lang$html$Html$p,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('project-info-title'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$a,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$href(_p1._1),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(_p1._0),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
 var _user$project$Main$viewImgProjectlink = function (record) {
-	var _p0 = record;
-	var projectTitle = _p0.projectTitle;
-	var projectImg = _p0.projectImg;
-	var projectLink = _p0.projectLink;
+	var _p2 = record;
+	var projectTitle = _p2.projectTitle;
+	var projectImg = _p2.projectImg;
+	var projectLink = _p2.projectLink;
 	return A2(
 		_elm_lang$html$Html$div,
 		{
@@ -8300,7 +8300,8 @@ var _user$project$Main$viewImgProjectlink = function (record) {
 		},
 		{
 			ctor: '::',
-			_0: A2(_user$project$Main$viewProjectInfo, projectTitle, projectLink),
+			_0: _user$project$Main$viewProjectInfo(
+				{ctor: '_Tuple2', _0: projectTitle, _1: projectLink}),
 			_1: {
 				ctor: '::',
 				_0: A2(
@@ -8321,13 +8322,13 @@ var _user$project$Main$viewImgProjectlink = function (record) {
 };
 var _user$project$Main$selectedProjects = {
 	ctor: '::',
-	_0: {projectTitle: 'Illustration', projectImg: '1.png', projectLink: 'http://www.google.com'},
+	_0: {projectTitle: 'Illustration', projectImg: '1.png', projectLink: 'https://www.instagram.com/dicharliedesigns'},
 	_1: {
 		ctor: '::',
-		_0: {projectTitle: 'UX / UI / Design', projectImg: '2.png', projectLink: 'http://www.google.com'},
+		_0: {projectTitle: 'UX / UI / Design', projectImg: '2.png', projectLink: 'https://www.instagram.com/lightfaced.industries/'},
 		_1: {
 			ctor: '::',
-			_0: {projectTitle: 'Code', projectImg: '3.png', projectLink: 'http://www.google.com'},
+			_0: {projectTitle: 'Code', projectImg: '3.png', projectLink: 'https://github.com/thomasoflight'},
 			_1: {ctor: '[]'}
 		}
 	}
@@ -8342,36 +8343,32 @@ var _user$project$Main$view = A2(
 	{
 		ctor: '::',
 		_0: A2(
-			_elm_lang$html$Html$nav,
+			_elm_lang$html$Html$img,
 			{
 				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('navbar navbar-expand-md navbar-dark bg-dark navbar-height'),
+				_0: _elm_lang$html$Html_Attributes$src('header_colored_letters.svg'),
 				_1: {ctor: '[]'}
 			},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$ul,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('navbar-nav  mx-auto text-center'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$li,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$class('nav-item mx-auto'),
-								_1: {ctor: '[]'}
-							},
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html$text('about'),
-								_1: {ctor: '[]'}
-							}),
-						_1: {
+			{ctor: '[]'}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$nav,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('navbar navbar-expand-md navbar-dark bg-dark navbar-height'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$ul,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('navbar-nav mx-auto text-center'),
+							_1: {ctor: '[]'}
+						},
+						{
 							ctor: '::',
 							_0: A2(
 								_elm_lang$html$Html$li,
@@ -8382,7 +8379,7 @@ var _user$project$Main$view = A2(
 								},
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html$text('portfolio'),
+									_0: _elm_lang$html$Html$text('about'),
 									_1: {ctor: '[]'}
 								}),
 							_1: {
@@ -8396,21 +8393,29 @@ var _user$project$Main$view = A2(
 									},
 									{
 										ctor: '::',
-										_0: _elm_lang$html$Html$text('contact'),
+										_0: _elm_lang$html$Html$text('portfolio'),
 										_1: {ctor: '[]'}
 									}),
-								_1: {ctor: '[]'}
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$li,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('nav-item mx-auto'),
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text('contact'),
+											_1: {ctor: '[]'}
+										}),
+									_1: {ctor: '[]'}
+								}
 							}
-						}
-					}),
-				_1: {ctor: '[]'}
-			}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$br,
-				{ctor: '[]'},
-				{ctor: '[]'}),
+						}),
+					_1: {ctor: '[]'}
+				}),
 			_1: {
 				ctor: '::',
 				_0: A2(
@@ -8420,21 +8425,28 @@ var _user$project$Main$view = A2(
 				_1: {
 					ctor: '::',
 					_0: A2(
-						_elm_lang$html$Html$div,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('project-links mx-auto'),
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$div,
-								{ctor: '[]'},
-								A2(_elm_lang$core$List$map, _user$project$Main$viewImgProjectlink, _user$project$Main$selectedProjects)),
-							_1: {ctor: '[]'}
-						}),
-					_1: {ctor: '[]'}
+						_elm_lang$html$Html$br,
+						{ctor: '[]'},
+						{ctor: '[]'}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('project-links mx-auto'),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$div,
+									{ctor: '[]'},
+									A2(_elm_lang$core$List$map, _user$project$Main$viewImgProjectlink, _user$project$Main$selectedProjects)),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
 				}
 			}
 		}
