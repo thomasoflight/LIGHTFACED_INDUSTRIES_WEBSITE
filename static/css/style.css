@@ -27,9 +27,9 @@ body, html {
     border-bottom-right-radius: 8px;
 }
 
+
 .nav-item {
     width: 88%;
-    height: 81px;
     color: #fff;
     font-family: Questrial;
     font-size: 16px;
@@ -37,7 +37,11 @@ body, html {
     font-size: 16px;
 }
 
-.nav-ul-width {
+.navbar-height {
+    height: 80px;
+}
+
+nav > ul {
     width: 91%;
 }
 

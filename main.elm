@@ -8,8 +8,8 @@ import List
 
 view =
     div [ class "container" ]
-        [ nav [ class "navbar navbar-expand-md navbar-dark bg-dark" ]
-            [ ul [ class "navbar-nav nav-ul-width mx-auto text-center" ]
+        [ nav [ class "navbar navbar-expand-md navbar-dark bg-dark navbar-height" ]
+            [ ul [ class "navbar-nav mx-auto text-center" ]
                 [ li [ class "nav-item mx-auto" ] [ text "about" ]
                 , li [ class "nav-item mx-auto" ] [ text "portfolio" ]
                 , li [ class "nav-item mx-auto" ] [ text "contact" ]
@@ -36,9 +36,9 @@ type alias Project =
 
 selectedProjects : List Project
 selectedProjects =
-    [ { projectTitle = "Illustration", projectImg = "1.png", projectLink = "google.com" }
-    , { projectTitle = "UX / UI / Design", projectImg = "2.png", projectLink = "google.com" }
-    , { projectTitle = "Code", projectImg = "3.png", projectLink = "google.com" }
+    [ { projectTitle = "Illustration", projectImg = "1.png", projectLink = "http://www.google.com" }
+    , { projectTitle = "UX / UI / Design", projectImg = "2.png", projectLink = "http://www.google.com" }
+    , { projectTitle = "Code", projectImg = "3.png", projectLink = "http://www.google.com" }
     ]
 
 

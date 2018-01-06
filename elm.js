@@ -8321,13 +8321,13 @@ var _user$project$Main$viewImgProjectlink = function (record) {
 };
 var _user$project$Main$selectedProjects = {
 	ctor: '::',
-	_0: {projectTitle: 'Illustration', projectImg: '1.png', projectLink: 'google.com'},
+	_0: {projectTitle: 'Illustration', projectImg: '1.png', projectLink: 'http://www.google.com'},
 	_1: {
 		ctor: '::',
-		_0: {projectTitle: 'UX / UI / Design', projectImg: '2.png', projectLink: 'google.com'},
+		_0: {projectTitle: 'UX / UI / Design', projectImg: '2.png', projectLink: 'http://www.google.com'},
 		_1: {
 			ctor: '::',
-			_0: {projectTitle: 'Code', projectImg: '3.png', projectLink: 'google.com'},
+			_0: {projectTitle: 'Code', projectImg: '3.png', projectLink: 'http://www.google.com'},
 			_1: {ctor: '[]'}
 		}
 	}
@@ -8345,7 +8345,7 @@ var _user$project$Main$view = A2(
 			_elm_lang$html$Html$nav,
 			{
 				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('navbar navbar-expand-md navbar-dark bg-dark'),
+				_0: _elm_lang$html$Html_Attributes$class('navbar navbar-expand-md navbar-dark bg-dark navbar-height'),
 				_1: {ctor: '[]'}
 			},
 			{
@@ -8354,7 +8354,7 @@ var _user$project$Main$view = A2(
 					_elm_lang$html$Html$ul,
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('navbar-nav nav-ul-width mx-auto text-center'),
+						_0: _elm_lang$html$Html_Attributes$class('navbar-nav  mx-auto text-center'),
 						_1: {ctor: '[]'}
 					},
 					{
