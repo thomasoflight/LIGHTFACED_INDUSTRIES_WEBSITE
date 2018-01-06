@@ -8260,24 +8260,37 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
-var _user$project$Main$viewProjectInfo = function (projectTitle) {
-	return A2(
-		_elm_lang$html$Html$p,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('project-info-title'),
-			_1: {ctor: '[]'}
-		},
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html$text(projectTitle),
-			_1: {ctor: '[]'}
-		});
-};
+var _user$project$Main$viewProjectInfo = F2(
+	function (projectTitle, projectLink) {
+		return A2(
+			_elm_lang$html$Html$p,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('project-info-title'),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$a,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$href(projectLink),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(projectTitle),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			});
+	});
 var _user$project$Main$viewImgProjectlink = function (record) {
 	var _p0 = record;
 	var projectTitle = _p0.projectTitle;
 	var projectImg = _p0.projectImg;
+	var projectLink = _p0.projectLink;
 	return A2(
 		_elm_lang$html$Html$div,
 		{
@@ -8287,7 +8300,7 @@ var _user$project$Main$viewImgProjectlink = function (record) {
 		},
 		{
 			ctor: '::',
-			_0: _user$project$Main$viewProjectInfo(projectTitle),
+			_0: A2(_user$project$Main$viewProjectInfo, projectTitle, projectLink),
 			_1: {
 				ctor: '::',
 				_0: A2(
@@ -8308,13 +8321,13 @@ var _user$project$Main$viewImgProjectlink = function (record) {
 };
 var _user$project$Main$selectedProjects = {
 	ctor: '::',
-	_0: {projectTitle: 'Illustration', projectImg: '1.png'},
+	_0: {projectTitle: 'Illustration', projectImg: '1.png', projectLink: 'google.com'},
 	_1: {
 		ctor: '::',
-		_0: {projectTitle: 'UX / UI / Design', projectImg: '2.png'},
+		_0: {projectTitle: 'UX / UI / Design', projectImg: '2.png', projectLink: 'google.com'},
 		_1: {
 			ctor: '::',
-			_0: {projectTitle: 'Code', projectImg: '3.png'},
+			_0: {projectTitle: 'Code', projectImg: '3.png', projectLink: 'google.com'},
 			_1: {ctor: '[]'}
 		}
 	}
@@ -8341,7 +8354,7 @@ var _user$project$Main$view = A2(
 					_elm_lang$html$Html$ul,
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('navbar-nav'),
+						_0: _elm_lang$html$Html_Attributes$class('navbar-nav nav-ul-width mx-auto text-center'),
 						_1: {ctor: '[]'}
 					},
 					{
@@ -8350,12 +8363,12 @@ var _user$project$Main$view = A2(
 							_elm_lang$html$Html$li,
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$class('nav-item'),
+								_0: _elm_lang$html$Html_Attributes$class('nav-item mx-auto'),
 								_1: {ctor: '[]'}
 							},
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html$text('hello'),
+								_0: _elm_lang$html$Html$text('about'),
 								_1: {ctor: '[]'}
 							}),
 						_1: {
@@ -8364,12 +8377,12 @@ var _user$project$Main$view = A2(
 								_elm_lang$html$Html$li,
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('nav-item'),
+									_0: _elm_lang$html$Html_Attributes$class('nav-item mx-auto'),
 									_1: {ctor: '[]'}
 								},
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html$text('hig'),
+									_0: _elm_lang$html$Html$text('portfolio'),
 									_1: {ctor: '[]'}
 								}),
 							_1: {
@@ -8378,12 +8391,12 @@ var _user$project$Main$view = A2(
 									_elm_lang$html$Html$li,
 									{
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$class('nav-item'),
+										_0: _elm_lang$html$Html_Attributes$class('nav-item mx-auto'),
 										_1: {ctor: '[]'}
 									},
 									{
 										ctor: '::',
-										_0: _elm_lang$html$Html$text('bye'),
+										_0: _elm_lang$html$Html$text('contact'),
 										_1: {ctor: '[]'}
 									}),
 								_1: {ctor: '[]'}
@@ -8427,9 +8440,9 @@ var _user$project$Main$view = A2(
 		}
 	});
 var _user$project$Main$main = _elm_lang$virtual_dom$Native_VirtualDom.staticProgram(_user$project$Main$view);
-var _user$project$Main$Project = F2(
-	function (a, b) {
-		return {projectTitle: a, projectImg: b};
+var _user$project$Main$Project = F3(
+	function (a, b, c) {
+		return {projectTitle: a, projectImg: b, projectLink: c};
 	});
 
 var Elm = {};

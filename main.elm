@@ -9,10 +9,10 @@ import List
 view =
     div [ class "container" ]
         [ nav [ class "navbar navbar-expand-md navbar-dark bg-dark" ]
-            [ ul [ class "navbar-nav" ]
-                [ li [ class "nav-item" ] [ text "hello" ]
-                , li [ class "nav-item" ] [ text "hig" ]
-                , li [ class "nav-item" ] [ text "bye" ]
+            [ ul [ class "navbar-nav nav-ul-width mx-auto text-center" ]
+                [ li [ class "nav-item mx-auto" ] [ text "about" ]
+                , li [ class "nav-item mx-auto" ] [ text "portfolio" ]
+                , li [ class "nav-item mx-auto" ] [ text "contact" ]
                 ]
             ]
         , br [] []
@@ -28,26 +28,29 @@ view =
 
 
 type alias Project =
-    { projectTitle : String, projectImg : String }
+    { projectTitle : String
+    , projectImg : String
+    , projectLink : String
+    }
 
 
 selectedProjects : List Project
 selectedProjects =
-    [ { projectTitle = "Illustration", projectImg = "1.png" }
-    , { projectTitle = "UX / UI / Design", projectImg = "2.png" }
-    , { projectTitle = "Code", projectImg = "3.png" }
+    [ { projectTitle = "Illustration", projectImg = "1.png", projectLink = "google.com" }
+    , { projectTitle = "UX / UI / Design", projectImg = "2.png", projectLink = "google.com" }
+    , { projectTitle = "Code", projectImg = "3.png", projectLink = "google.com" }
     ]
 
 
 viewImgProjectlink : Project -> Html msg
 viewImgProjectlink record =
     let
-        { projectTitle, projectImg } =
+        { projectTitle, projectImg, projectLink } =
             record
     in
         div
             [ class "project-links-spacing" ]
-            [ viewProjectInfo projectTitle
+            [ viewProjectInfo projectTitle projectLink
             , img
                 [ src (projectImg)
                 , class "img-fluid project-img-links"
@@ -56,8 +59,12 @@ viewImgProjectlink record =
             ]
 
 
-viewProjectInfo projectTitle =
-    p [ class "project-info-title" ] [ text (projectTitle) ]
+
+--[ a [ href "#", onClick (SwitchPage Schedule) ] [ text "Schedule" ]
+
+
+viewProjectInfo projectTitle projectLink =
+    p [ class "project-info-title" ] [ a [ href (projectLink) ] [ text (projectTitle) ] ]
 
 
 main =
