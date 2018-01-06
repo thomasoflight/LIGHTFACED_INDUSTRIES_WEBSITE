@@ -6,24 +6,41 @@ import Html.Events exposing (onClick)
 import List
 
 
+navItems =
+    [ "about", "portfolio", "contact" ]
+
+
+viewNavLinks : List String -> List (Html msg)
+viewNavLinks items =
+    let
+        returnNavItem item =
+            li [ class "nav-item mx-auto" ]
+                [ a [ href ("#loc-" ++ item) ] [ text (item) ]
+                ]
+    in
+        (List.map returnNavItem items)
+
+
 view =
     div [ class "container" ]
         [ img [ src ("header_colored_letters.svg") ] []
         , nav [ class "navbar navbar-expand-md navbar-dark bg-dark navbar-height" ]
             [ ul [ class "navbar-nav mx-auto text-center" ]
-                [ li [ class "nav-item mx-auto" ] [ text "about" ]
-                , li [ class "nav-item mx-auto" ] [ text "portfolio" ]
-                , li [ class "nav-item mx-auto" ] [ text "contact" ]
-                ]
+                (viewNavLinks navItems)
             ]
         , br [] []
         , br [] []
+        , br [] []
+        , br [] []
         , div [ class "project-links mx-auto" ]
-            [ div []
+            [ div [ id "loc-portfolio" ]
                 (List.map
                     viewImgProjectlink
                     selectedProjects
                 )
+            ]
+        , footer [ id "loc-contact" ]
+            [ p [] [ text ("hello") ]
             ]
         ]
 
