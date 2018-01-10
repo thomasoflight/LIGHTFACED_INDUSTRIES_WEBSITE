@@ -40,7 +40,7 @@ view =
                 )
             ]
         , footer [ id "loc-contact" ]
-            [ p [] [ text ("hello") ]
+            [ p [ class "text-center" ] [ text ("Lightfaced Industries LLC" ++ "    " ++ "2018") ]
             ]
         ]
 
@@ -54,9 +54,9 @@ type alias Project =
 
 selectedProjects : List Project
 selectedProjects =
-    [ { projectTitle = "Illustration", projectImg = "1.png", projectLink = "https://www.instagram.com/dicharliedesigns" }
+    [ { projectTitle = "Code", projectImg = "3.png", projectLink = "https://github.com/thomasoflight" }
     , { projectTitle = "UX / UI / Design", projectImg = "2.png", projectLink = "https://www.instagram.com/lightfaced.industries/" }
-    , { projectTitle = "Code", projectImg = "3.png", projectLink = "https://github.com/thomasoflight" }
+    , { projectTitle = "Illustration", projectImg = "1.png", projectLink = "https://www.instagram.com/dicharliedesigns" }
     ]
 
 

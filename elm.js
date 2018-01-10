@@ -8322,13 +8322,13 @@ var _user$project$Main$viewImgProjectlink = function (record) {
 };
 var _user$project$Main$selectedProjects = {
 	ctor: '::',
-	_0: {projectTitle: 'Illustration', projectImg: '1.png', projectLink: 'https://www.instagram.com/dicharliedesigns'},
+	_0: {projectTitle: 'Code', projectImg: '3.png', projectLink: 'https://github.com/thomasoflight'},
 	_1: {
 		ctor: '::',
 		_0: {projectTitle: 'UX / UI / Design', projectImg: '2.png', projectLink: 'https://www.instagram.com/lightfaced.industries/'},
 		_1: {
 			ctor: '::',
-			_0: {projectTitle: 'Code', projectImg: '3.png', projectLink: 'https://github.com/thomasoflight'},
+			_0: {projectTitle: 'Illustration', projectImg: '1.png', projectLink: 'https://www.instagram.com/dicharliedesigns'},
 			_1: {ctor: '[]'}
 		}
 	}
@@ -8471,10 +8471,18 @@ var _user$project$Main$view = A2(
 											ctor: '::',
 											_0: A2(
 												_elm_lang$html$Html$p,
-												{ctor: '[]'},
 												{
 													ctor: '::',
-													_0: _elm_lang$html$Html$text('hello'),
+													_0: _elm_lang$html$Html_Attributes$class('text-center'),
+													_1: {ctor: '[]'}
+												},
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html$text(
+														A2(
+															_elm_lang$core$Basics_ops['++'],
+															'Lightfaced Industries LLC',
+															A2(_elm_lang$core$Basics_ops['++'], '    ', '2018'))),
 													_1: {ctor: '[]'}
 												}),
 											_1: {ctor: '[]'}
